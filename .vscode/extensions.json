@@ -1,0 +1,48 @@
+{
+  "recommendations": [
+    // Essential for TypeScript/JavaScript development
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    
+    // React and React Native development
+    "msjsdiag.vscode-react-native",
+    "formulahendry.auto-rename-tag",
+    
+    // Firebase development
+    "toba.vsfire",
+    "firebase.firebase-vscode",
+    
+    // Git and GitHub
+    "github.vscode-pull-request-github",
+    "github.copilot",
+    "github.copilot-chat",
+    "donjayamanne.githistory",
+    
+    // Code quality and formatting
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    
+    // Docker and DevContainer
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    
+    // Markdown and documentation
+    "yzhang.markdown-all-in-one",
+    "ms-vscode.vscode-markdown",
+    
+    // JSON and YAML
+    "ms-vscode.vscode-json",
+    "ms-vscode.vscode-yaml",
+    
+    // Utilities
+    "ms-vscode.hexeditor",
+    "ms-vscode.remote-repositories",
+    "redhat.vscode-xml"
+  ],
+  "unwantedRecommendations": [
+    // Extensions that might conflict or are not needed
+    "hookyqr.beautify",
+    "ms-vscode.vscode-typescript"
+  ]
+}

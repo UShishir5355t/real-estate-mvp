@@ -1,0 +1,113 @@
+{
+  // TypeScript and JavaScript settings
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
+  
+  // Prettier configuration
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": true,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 100,
+  
+  // Editor settings
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  
+  // File associations
+  "files.associations": {
+    "*.json": "jsonc",
+    ".env*": "dotenv",
+    "*.md": "markdown"
+  },
+  
+  // Search settings
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/*.log": true,
+    "**/coverage": true,
+    "**/.git": true,
+    "**/ios/build": true,
+    "**/android/build": true,
+    "**/android/app/build": true
+  },
+  
+  // File explorer settings
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": false,
+    "**/build": true,
+    "**/dist": true
+  },
+  
+  // React Native specific settings
+  "reactNative.showUserTips": false,
+  "reactNative.packager.port": 8081,
+  
+  // Emmet settings
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  
+  // Git settings
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  
+  // Terminal settings
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/bin/zsh",
+      "args": ["-l"]
+    }
+  },
+  
+  // Workspace recommendations
+  "extensions.ignoreRecommendations": false,
+  
+  // IntelliSense settings
+  "typescript.suggest.autoImports": true,
+  "javascript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  
+  // Spelling settings
+  "cSpell.words": [
+    "firestore",
+    "Firebase",
+    "Firestore",
+    "reactnative",
+    "devcontainer",
+    "splunkdevabhi",
+    "Abhishek",
+    "Shukla",
+    "brokers",
+    "realtor",
+    "realtors",
+    "brokerage",
+    "whatsapp"
+  ],
+  
+  // Auto-save settings
+  "files.autoSave": "onFocusChange",
+  
+  // Breadcrumbs
+  "breadcrumbs.enabled": true,
+  
+  // Minimap
+  "editor.minimap.enabled": true,
+  "editor.minimap.showSlider": "always"
+}

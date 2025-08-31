@@ -58,7 +58,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Editor directories and files
-.vscode/
+# .vscode/ - We keep VS Code settings for team development
 .idea/
 *.swp
 *.swo
@@ -121,12 +121,8 @@ temp/
 # Serverless directories
 .serverless
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# IDE - VSCode (allow team development configurations)
+# .vscode/ - We include VS Code settings for consistent team development
 
 # IDE - IntelliJ
 *.iws

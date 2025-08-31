@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  dev-environment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+      - vscode-extensions:/home/vscode/.vscode-server/extensions
+      - node-modules-admin:/workspace/admin-panel/node_modules
+      - node-modules-mobile:/workspace/mobile-app/node_modules
+    
+    # Overrides default command so things don't shut down after the process ends
+    command: sleep infinity
+    
+    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally
+    ports:
+      - "3000:3000"   # Admin Panel
+      - "8081:8081"   # Metro Bundler
+      - "9090:9090"   # Firebase Emulator UI
+      - "9099:9099"   # Firebase Auth Emulator
+      - "8080:8080"   # Firestore Emulator
+      - "9199:9199"   # Firebase Storage Emulator
+    
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+    
+    # Enable Docker-in-Docker
+    privileged: true
+    
+    # Add labels for better organization
+    labels:
+      - "com.docker.compose.project=real-estate-mvp"
+      - "com.docker.compose.service=dev-environment"
+
+volumes:
+  vscode-extensions:
+  node-modules-admin:
+  node-modules-mobile:

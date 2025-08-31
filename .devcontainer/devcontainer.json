@@ -1,0 +1,147 @@
+{
+  "name": "🏠 Real Estate MVP Development",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "dev-environment",
+  "workspaceFolder": "/workspace",
+
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // TypeScript & JavaScript
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        
+        // React & React Native
+        "msjsdiag.vscode-react-native",
+        "formulahendry.auto-rename-tag",
+        "ms-vscode.vscode-json",
+        
+        // Firebase
+        "toba.vsfire",
+        "firebase.firebase-vscode",
+        
+        // Git & GitHub
+        "github.vscode-pull-request-github",
+        "github.copilot",
+        "github.copilot-chat",
+        "donjayamanne.githistory",
+        
+        // Mobile Development
+        "ms-vscode.vscode-react-native-preview",
+        "naumovs.color-highlight",
+        
+        // Docker
+        "ms-azuretools.vscode-docker",
+        
+        // Utils
+        "ms-vscode.vscode-yaml",
+        "redhat.vscode-xml",
+        "ms-vscode.vscode-markdown",
+        "yzhang.markdown-all-in-one",
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode.hexeditor",
+        "ms-vscode.remote-repositories"
+      ],
+      "settings": {
+        "typescript.preferences.quoteStyle": "single",
+        "javascript.preferences.quoteStyle": "single",
+        "prettier.singleQuote": true,
+        "prettier.trailingComma": "es5",
+        "prettier.semi": true,
+        "prettier.tabWidth": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+        },
+        "files.associations": {
+          "*.json": "jsonc"
+        },
+        "emmet.includeLanguages": {
+          "javascript": "javascriptreact",
+          "typescript": "typescriptreact"
+        },
+        "git.enableSmartCommit": true,
+        "git.confirmSync": false,
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  },
+
+  // Features to add to the dev container
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "username": "vscode",
+      "userUid": "1000",
+      "userGid": "1000"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "nodeGypDependencies": true,
+      "version": "18",
+      "nvmVersion": "latest"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "ppa": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "latest",
+      "enableNonRootDocker": "true"
+    }
+  },
+
+  // Use 'postCreateCommand' to run commands after the container is created
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+  // Use 'postStartCommand' to run commands after the container starts
+  "postStartCommand": "echo '🏠 Real Estate MVP Development Environment Ready!'",
+
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode",
+
+  // Forward ports for development servers
+  "forwardPorts": [
+    3000, // Admin Panel React dev server
+    8081, // Metro bundler for React Native
+    9090, // Firebase emulator UI
+    9099, // Firebase Auth emulator
+    8080, // Firestore emulator
+    9199  // Firebase Storage emulator
+  ],
+
+  "portsAttributes": {
+    "3000": {
+      "label": "Admin Panel",
+      "onAutoForward": "openPreview"
+    },
+    "8081": {
+      "label": "Metro Bundler",
+      "onAutoForward": "ignore"
+    },
+    "9090": {
+      "label": "Firebase Emulator UI",
+      "onAutoForward": "openPreview"
+    }
+  },
+
+  // Set environment variables
+  "containerEnv": {
+    "NODE_ENV": "development",
+    "WATCHPACK_POLLING": "true"
+  },
+
+  // Mount local folder to persist extensions and settings
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer/vscode-extensions,target=/home/vscode/.vscode-server/extensions,type=bind,consistency=cached"
+  ]
+}
