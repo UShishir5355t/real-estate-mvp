@@ -81,9 +81,39 @@ real-estate-mvp/
 
 ### Installation
 
+#### Option 1: DevContainer (Recommended) 🐳
+
+The easiest way to get started with a consistent development environment:
+
+1. **Prerequisites**
+   - VS Code with [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+   - Docker Desktop installed and running
+
+2. **Quick Setup**
+   ```bash
+   git clone https://github.com/splunkdevabhi/real-estate-mvp.git
+   cd real-estate-mvp
+   code .  # Open in VS Code
+   ```
+
+3. **Open in Container**
+   - VS Code will prompt "Reopen in Container" - click it!
+   - Or use Command Palette → "Dev Containers: Reopen in Container"
+   - Wait for automatic setup to complete (~5-10 minutes first time)
+
+4. **Start Developing**
+   ```bash
+   # All dependencies are auto-installed!
+   ./dev-admin.sh      # Start admin panel
+   ./dev-mobile.sh     # Start mobile app
+   ./dev-firebase.sh   # Start Firebase emulators
+   ```
+
+#### Option 2: Manual Setup
+
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/splunkdevabhi/real-estate-mvp.git
    cd real-estate-mvp
    ```
 
