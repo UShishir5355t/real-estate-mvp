@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Properties collection - readable by all, writable by authenticated admin only
+    match /properties/{propertyId} {
+      allow read: if true; // Public read access for mobile app users
+      allow write: if request.auth != null && request.auth.token.admin == true;
+    }
+    
+    // Inquiries collection - writable by all, readable by admin only
+    match /inquiries/{inquiryId} {
+      allow create: if true; // Allow anyone to create inquiries
+      allow read, update, delete: if request.auth != null && request.auth.token.admin == true;
+    }
+    
+    // Users collection - only readable/writable by the user themselves or admin
+    match /users/{userId} {
+      allow read, write: if request.auth != null && 
+        (request.auth.uid == userId || request.auth.token.admin == true);
+    }
+    
+    // Admin users collection - only readable by authenticated admins
+    match /admins/{adminId} {
+      allow read, write: if request.auth != null && request.auth.token.admin == true;
+    }
+  }
+}

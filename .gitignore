@@ -1,0 +1,138 @@
+# Real Estate MVP - Git Ignore File
+
+# Environment variables (NEVER commit these)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies
+node_modules/
+*/node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+*/coverage/
+
+# Production builds
+build/
+*/build/
+dist/
+*/dist/
+
+# React Native specific
+mobile-app/ios/build/
+mobile-app/android/build/
+mobile-app/android/app/build/
+mobile-app/.bundle/
+mobile-app/vendor/bundle/
+
+# iOS specific
+mobile-app/ios/Pods/
+mobile-app/ios/**/*.xcworkspace
+mobile-app/ios/**/*.xcuserdata
+mobile-app/ios/.xcode.env.local
+
+# Android specific
+mobile-app/android/.gradle/
+mobile-app/android/gradle/
+mobile-app/android/gradlew
+mobile-app/android/gradlew.bat
+mobile-app/android/local.properties
+mobile-app/android/**/*.iml
+mobile-app/android/.idea/
+mobile-app/android/**/*.hprof
+
+# Metro bundler
+mobile-app/.metro-health-check*
+mobile-app/metro-*.log
+
+# Debug files
+*.map
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Firebase
+.firebase/
+.firebaserc
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Misc
+*.tgz
+*.tar.gz
+
+# React specific
+.eslintcache
+
+# Styled components
+.styled-components/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE - IntelliJ
+*.iws
+*.iml
+*.ipr
+
+# Local development
+admin-panel/.env
+mobile-app/.env
